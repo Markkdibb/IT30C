@@ -32,7 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $messageType = "error";
 
     } else {
-        // Check whether the username already exists.
         $check = $conn->prepare(
             "SELECT userid FROM users WHERE username = ?"
         );
